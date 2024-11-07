@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: smart-api-service
+spec:
+  selector:
+    app: smart-api
+  ports:
+    - protocol: TCP
+      port: 1050
+      targetPort: 1050
+  type: LoadBalancer
